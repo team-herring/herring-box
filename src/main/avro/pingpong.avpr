@@ -1,0 +1,13 @@
+{
+    "namespace": "example.pingpong",
+    "protocol": "PingPong",
+
+    "types": [],
+
+    "messages": {
+        "send": {
+                "request":[ { "name": "msg", "type": "string"} ],
+                "response":"string"
+        }
+    }
+}
