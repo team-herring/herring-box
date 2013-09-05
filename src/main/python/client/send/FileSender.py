@@ -7,7 +7,7 @@ import httplib
 import avro.ipc as ipc
 import avro.protocol as protocol
 
-PROTOCOL = protocol.parse(open("../avro/mail.avpr").read())
+PROTOCOL = protocol.parse(open("../../avro/herring-box.avpr").read())
 server_addr = ('localhost', 9090)
 
 
@@ -29,7 +29,7 @@ if __name__ == '__main__':
 
     # fill in the Message record and send it
     message = dict()
-    message['to'] = sys.argv[1]
+    message['data'] = sys.argv[1]
     message['from'] = sys.argv[2]
     message['body'] = sys.argv[3]
 

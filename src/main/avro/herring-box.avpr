@@ -4,6 +4,7 @@
  "types": [
      {"name": "Message", "type": "record",
       "fields": [
+          {"name": "command", "type": "string"},
           {"name": "data", "type": {"type": "array", "items": "bytes"}}
       ]
      }
@@ -12,7 +13,7 @@
  "messages": {
      "send": {
          "request": [{"name": "message", "type": "Message"}],
-         "response": "string"
+         "response": "boolean"
      }
  }
 }
