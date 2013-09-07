@@ -1,5 +1,6 @@
-package example.pingpong;
+package example.E01pingpong;
 
+import example.proto.PingPong;
 import org.apache.avro.AvroRemoteException;
 import org.apache.avro.ipc.NettyServer;
 import org.apache.avro.ipc.NettyTransceiver;
@@ -19,7 +20,6 @@ import java.net.InetSocketAddress;
  */
 public class PingPongExecutor {
     static class PingPongImpl implements PingPong {
-        @Override
         public CharSequence send(CharSequence msg) throws AvroRemoteException {
             return new Utf8("Pong");
         }
@@ -41,7 +41,7 @@ public class PingPongExecutor {
             System.out.println("Server started");
 
             client = new NettyTransceiver(new InetSocketAddress(CALC_SERVER_PORT));
-            PingPong proxy = SpecificRequestor.getClient(PingPong.class, client);
+            PingPong proxy = (PingPong) SpecificRequestor.getClient(PingPong.class, client);
 
             Utf8 result = (Utf8) proxy.send(new Utf8("ping"));
             System.out.println(result);

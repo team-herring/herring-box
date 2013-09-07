@@ -1,0 +1,9 @@
+{
+    "type": "record",
+    "name": "HerringBoxData",
+    "namespace": "org.herring.proto",
+    "fields": [
+        {"name": "id"  , "type": "string"},
+        {"name": "data", "type": "bytes"}
+    ]
+}

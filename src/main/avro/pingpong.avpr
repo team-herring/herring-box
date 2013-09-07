@@ -1,5 +1,5 @@
 {
-    "namespace": "example.pingpong",
+    "namespace": "example.proto",
     "protocol": "PingPong",
 
     "types": [],
