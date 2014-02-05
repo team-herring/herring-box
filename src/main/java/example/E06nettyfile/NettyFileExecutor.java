@@ -20,11 +20,11 @@
 //import java.util.Map;
 //
 ///**
-// * Description.
-// *
-// * @author Youngdeok Kim
-// * @since 1.0
-// */
+//* Description.
+//*
+//* @author Youngdeok Kim
+//* @since 1.0
+//*/
 //public class NettyFileExecutor {
 //    private static final Map<String, BufferedOutputStream> fileMap = new HashMap<String, BufferedOutputStream>();
 //

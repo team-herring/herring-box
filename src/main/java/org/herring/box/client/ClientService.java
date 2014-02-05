@@ -155,7 +155,7 @@ public class ClientService {
 
     public static void main(String[] args) throws IOException {
         // register directory and process its events
-        Path dir = Paths.get("/home/newmoni/Desktop");
+        Path dir = Paths.get("");
         new ClientService(dir, true).processEvents();
     }
 }
